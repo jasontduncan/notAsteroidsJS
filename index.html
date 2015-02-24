@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @font-face{
+            font-family: justADream;
+            src: url('./assets/justadream_solid.ttf');
+        }
+    </style>
+    <script type="text/javascript" src="lib/1.0.1/kiwi.min.js"></script>
+    <script type="text/javascript">
+        var gameoptions = {
+
+            //Defines how many logs Kiwi should return.
+            debug : Kiwi.DEBUG_ON, //Or Kiwi.DEBUG_OFF
+
+            //Used to determine how, and also which, various managers should boot.
+            deviceTarget : Kiwi.TARGET_BROWSER, //Or Kiwi.TARGET_COCOON
+
+            //Which type of renderer should be used.
+            renderer : Kiwi.RENDERER_CANVAS, // Or Kiwi.RENDERER_WEBGL
+
+            //Width of the Stage
+            width : 1280,
+
+            //Height of the Stage
+            height : 650,
+
+            //How Kiwi should scale the Stage/Container. Default is 'no-scaling'.
+            scaleType : Kiwi.Stage.SCALE_NONE, //Also accepts "SCALE_STRETCH" or "SCALE_FIT"
+
+            //Plugins that are to used with your game.
+            //This is just an array of Strings, with each string being the name of Plugin to use.
+            //If blank, no plugins will be used.
+            plugins : [] //['SaveGame', 'InAppPurchase'];
+        };
+    </script>
+
+    <script type="text/javascript" src="notasteroidsJS.js"></script>
+</head>
+<body>
+<div id="game"></div>
+</body>
+</html>
